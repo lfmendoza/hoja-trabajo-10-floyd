@@ -6,6 +6,7 @@ Este proyecto implementa un grafo dirigido y el algoritmo de Floyd-Warshall para
 
 ### Estructura del Proyecto
 
+```
 ProyectoGrafo/
 ├── java/
 │ ├── src/
@@ -27,6 +28,7 @@ ProyectoGrafo/
 │ ├── uml/
 │ │ └── diagrama.uml
 │ └── README.md
+```
 
 ### Estructura del Archivo guategrafo.txt
 
