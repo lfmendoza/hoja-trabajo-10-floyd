@@ -10,25 +10,22 @@ Este proyecto implementa un grafo dirigido y el algoritmo de Floyd-Warshall para
 ProyectoGrafo/
 ├── floyd/
 │ ├── src/
-│ │ ├── main
-│ │ │ ├── Grafo.java
-│ │ │ ├── AlgoritmoFloyd.java
-│ │ │ └── App.java
-│ │ ├── tests/
-│ │ │ ├─── GrafoTest.java
-│ │ │ └─── AlgoritmoFloydTest.java
-│ │ └── resources/
-│ │   ├── diagrama.uml
-│ │   └── guategrafo.txt
-│ └── README.md
+│ ├── main
+│ │ ├── Grafo.java
+│ │ ├── AlgoritmoFloyd.java
+│ │ └── App.java
+│ ├── tests/
+│ │ ├─── GrafoTest.java
+│ │ └─── AlgoritmoFloydTest.java
+│ └── resources/
+│   ├── Floyd Algorithm.pdf
+│   └── guategrafo.txt
 ├── python/
 │ ├── main.py
 │ ├── grafo.py
 │ ├── algoritmo_floyd.py
-│ ├── guategrafo.txt
-│ ├── uml/
-│ │ └── diagrama.uml
-│ └── README.md
+│ └── requirements.txt
+└── README.md
 ```
 
 ### Estructura del Archivo guategrafo.txt
