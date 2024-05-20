@@ -59,8 +59,12 @@ public class Grafo {
         return new ArrayList<>(ciudadIndice.keySet());
     }
 
-    public static Grafo leerGrafoDesdeArchivo(String nombreArchivo) throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader(nombreArchivo));
+    public static Grafo leerGrafoDesdeArchivo() throws IOException {
+        InputStream inputStream = Grafo.class.getClassLoader().getResourceAsStream("guategrafo.txt");
+        if (inputStream == null) {
+            throw new FileNotFoundException("El archivo guategrafo.txt no se encuentra en src/main/resources");
+        }
+        BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
         String linea;
         Set<String> ciudades = new HashSet<>();
         List<String[]> arcos = new ArrayList<>();
