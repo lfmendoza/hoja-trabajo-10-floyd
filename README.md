@@ -8,17 +8,18 @@ Este proyecto implementa un grafo dirigido y el algoritmo de Floyd-Warshall para
 
 ```
 ProyectoGrafo/
-├── java/
+├── floyd/
 │ ├── src/
-│ │ ├── Grafo.java
-│ │ ├── AlgoritmoFloyd.java
-│ │ ├── Main.java
-│ │ └── tests/
-│ │ ├── GrafoTest.java
-│ │ └── AlgoritmoFloydTest.java
-│ ├── guategrafo.txt
-│ ├── uml/
-│ │ └── diagrama.uml
+│ │ ├── main
+│ │ │ ├── Grafo.java
+│ │ │ ├── AlgoritmoFloyd.java
+│ │ │ └── App.java
+│ │ ├── tests/
+│ │ │ ├─── GrafoTest.java
+│ │ │ └─── AlgoritmoFloydTest.java
+│ │ └── resources/
+│ │   ├── diagrama.uml
+│ │   └── guategrafo.txt
 │ └── README.md
 ├── python/
 │ ├── main.py

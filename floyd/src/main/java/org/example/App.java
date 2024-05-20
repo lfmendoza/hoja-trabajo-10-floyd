@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /**
- * Hello world!
+ * Algoritmo de Floyd
  *
  */
 public class App 
