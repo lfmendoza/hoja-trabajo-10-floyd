@@ -1,7 +1,7 @@
 import networkx as nx
 
 def floyd_warshall(grafo):
-    distancias, paths = nx.floyd_warshall_predecessor_and_distance(grafo, weight='weight')
+    paths, distancias = nx.floyd_warshall_predecessor_and_distance(grafo, weight='weight')
     return distancias, paths
 
 def obtener_ruta(distancias, paths, origen, destino):
