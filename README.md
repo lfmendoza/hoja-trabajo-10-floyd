@@ -130,9 +130,9 @@ Para ejemplo se utilizó la ruta desde Guatemala a Amatitlán. Debido a que en l
 
 ### Diagrama UML
 
-El diagrama UML del proyecto está ubicado en el directorio `uml/` tanto para la implementación en Java como en Python.
+El diagrama UML del proyecto está ubicado en el directorio `docs/` dentro de la raiz del proyecto.
 
-Contenido del archivo `diagrama.uml`:
+Contenido del archivo `Floyd Algorithm.pdf`:
 
 ```plantuml
 @startuml
