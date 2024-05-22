@@ -82,7 +82,14 @@ Escuintla SantaLucia 15
    pip install -r requirements.txt
    ```
 
-3. **Ejecutar el Programa Principal:**
+3. **Ejecutar pruebas unitarias**
+
+   ```bash
+   python -m unittest test_grafo.py
+   python -m unittest test_algoritmo_floyd.py
+   ```
+
+4. **Ejecutar el Programa Principal:**
    ```bash
    python main.py
    ```
@@ -156,7 +163,7 @@ Main --> Grafo
 - `ProyectoGrafo/python/guategrafo.txt`: Archivo de entrada con las conexiones entre ciudades.
 - `ProyectoGrafo/python/uml/diagrama.uml`: Diagrama UML del proyecto en PlantUML.
 
-## Recomendaciones
+## Pre-requisitos para ejecutar los programas
 
 - Asegurarse de tener instalado JUnit para ejecutar las pruebas unitarias en Java.
 - Para Python, asegurarse de tener NetworkX instalado para la implementación del algoritmo de Floyd-Warshall.

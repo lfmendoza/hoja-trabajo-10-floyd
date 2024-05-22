@@ -1,7 +1,9 @@
 import networkx as nx
+from grafo import leer_grafo_desde_archivo
+from algoritmo_floyd import floyd_warshall, obtener_ruta, centro_del_grafo
 
 def main():
-    G = leer_grafo_desde_archivo("guategrafo.txt")
+    G = leer_grafo_desde_archivo()
     distancias = floyd_warshall(G)
     
     while True:
@@ -47,4 +49,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
