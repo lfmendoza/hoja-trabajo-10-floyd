@@ -1,7 +1,7 @@
 Guatemala Antigua 42
 Guatemala Chimaltenango 56
 Guatemala Escuintla 58
-Guatemala Amatitlán 27
+Guatemala Amatitlán 97
 Guatemala VillaNueva 17
 Guatemala SantaLucia 33
 Guatemala Mixco 8

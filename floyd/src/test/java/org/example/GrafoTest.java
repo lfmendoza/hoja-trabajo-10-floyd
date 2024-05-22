@@ -3,7 +3,6 @@ package org.example;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.io.IOException;
-
 public class GrafoTest {
 
     @Test
@@ -41,5 +40,3 @@ public class GrafoTest {
         assertTrue(grafo.getNumVertices() > 0);
     }
 }
-
-

@@ -1,6 +1,9 @@
 package org.example;
 
+import java.util.*;
+
 public class AlgoritmoFloyd {
+
     public static int[][] floydWarshall(int[][] grafo) {
         int V = grafo.length;
         int[][] dist = new int[V][V];
@@ -28,18 +31,22 @@ public class AlgoritmoFloyd {
             }
         }
 
-        return dist;
+        return next;
     }
 
-    public static String obtenerRuta(int[][] next, int i, int j) {
+    public static String obtenerRuta(int[][] dist, int[][] next, int i, int j, Grafo grafo) {
         if (next[i][j] == -1) return "No hay camino";
         StringBuilder path = new StringBuilder();
+        path.append(grafo.getCiudad(i));
+        int totalDistancia = 0;
         while (i != j) {
-            path.append(i).append(" -> ");
-            i = next[i][j];
+            int nextCity = next[i][j];
+            if (nextCity == -1) return "No hay camino"; // Handle the case where there is no path
+            totalDistancia += dist[i][nextCity];
+            i = nextCity;
+            path.append(" -> ").append(grafo.getCiudad(i));
         }
-        path.append(j);
-        return path.toString();
+        return "Ruta: " + path.toString() + ", Peso: " + totalDistancia + " KM";
     }
 
     public static String centroGrafo(int[][] dist, Grafo grafo) {

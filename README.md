@@ -101,7 +101,28 @@ Escuintla SantaLucia 15
 - **Opción 1:** Ingresar la ciudad origen y destino, mostrar la ruta más corta y las ciudades intermedias.
 - **Opción 2:** Mostrar la ciudad que es el centro del grafo.
 - **Opción 3:** Modificar el grafo y recalcular las rutas más cortas y el nuevo centro del grafo.
-- **Opción 4:** Finalizar el programa.
+- **Opción 4:** Finalizar el programa...
+
+#### Ejemplo
+
+Para ejemplo se utilizó la ruta desde Guatemala a Amatitlán. Debido a que en la carretera de la Ruta al Pacífico se encuentra cerrada por el colapso de un hidrante recolector de lluvia la única ruta habilitada que conecta ambas ciudades es de 97km sin embargo existen rutas alternas en este caso de Guatemala a Antigua y de Antigua a Amatitlán que ofrecen un trayecto mucho menor a los 97km
+
+```
+   Opciones del programa:
+   1. Ruta más corta entre dos ciudades
+   2. Ciudad centro del grafo
+   3. Modificar grafo
+   4. Salir
+   1
+   Ciudad origen: Guatemala
+   Ciudad destino: Amatitlán
+   Ruta más corta: Ruta: Guatemala -> Antigua -> Amatitlán, Peso: 11 KM
+   Opciones del programa:
+   1. Ruta más corta entre dos ciudades
+   2. Ciudad centro del grafo
+   3. Modificar grafo
+   4. Salir
+```
 
 #### Pruebas Unitarias
 

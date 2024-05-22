@@ -1,11 +1,10 @@
-import networkx as nx
-from grafo import leer_grafo_desde_archivo
-from algoritmo_floyd import floyd_warshall, obtener_ruta, centro_del_grafo
+from grafo import Grafo
+from algoritmo_floyd import floyd_warshall, obtener_ruta, centro_grafo
 
 def main():
-    G = leer_grafo_desde_archivo()
-    distancias = floyd_warshall(G)
-    
+    grafo = Grafo.leer_grafo_desde_archivo()
+    distancias, paths = floyd_warshall(grafo.grafo)
+
     while True:
         print("Opciones del programa:")
         print("1. Ruta más corta entre dos ciudades")
@@ -18,10 +17,13 @@ def main():
         if opcion == 1:
             origen = input("Ciudad origen: ")
             destino = input("Ciudad destino: ")
-            ruta = obtener_ruta(distancias, origen, destino)
-            print(f"Ruta más corta de {origen} a {destino}: {' -> '.join(ruta)}")
+            if origen in grafo.ciudades and destino in grafo.ciudades:
+                ruta = obtener_ruta(distancias, paths, origen, destino)
+                print(f"Ruta más corta: {ruta}")
+            else:
+                print("Una o ambas ciudades no existen en el grafo.")
         elif opcion == 2:
-            centro = centro_del_grafo(G, distancias)
+            centro = centro_grafo(distancias)
             print(f"Ciudad centro del grafo: {centro}")
         elif opcion == 3:
             print("Opciones de modificación:")
@@ -32,15 +34,14 @@ def main():
             if opcion_mod == 'a':
                 ciudad1 = input("Ciudad 1: ")
                 ciudad2 = input("Ciudad 2: ")
-                if G.has_edge(ciudad1, ciudad2):
-                    G.remove_edge(ciudad1, ciudad2)
+                grafo.eliminar_arco(ciudad1, ciudad2)
             elif opcion_mod == 'b':
                 ciudad1 = input("Ciudad 1: ")
                 ciudad2 = input("Ciudad 2: ")
                 km = int(input("Distancia en KM: "))
-                G.add_edge(ciudad1, ciudad2, weight=km)
+                grafo.agregar_arco(ciudad1, ciudad2, km)
 
-            distancias = floyd_warshall(G)
+            distancias, paths = floyd_warshall(grafo.grafo)
         elif opcion == 4:
             print("Programa terminado.")
             break

@@ -1,6 +1,5 @@
 package org.example;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -10,11 +9,11 @@ import java.util.Scanner;
  */
 public class App 
 {
-    public static void main( String[] args ) throws IOException
-    {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         Grafo grafo = Grafo.leerGrafoDesdeArchivo();
         int[][] distancias = AlgoritmoFloyd.floydWarshall(grafo.getMatrizAdyacencia());
+        int[][] next = AlgoritmoFloyd.floydWarshall(grafo.getMatrizAdyacencia());
 
         while (true) {
             System.out.println("Opciones del programa:");
@@ -34,7 +33,13 @@ public class App
                     String destino = scanner.nextLine();
                     int indiceOrigen = grafo.getIndice(origen);
                     int indiceDestino = grafo.getIndice(destino);
-                    System.out.println("Ruta más corta: " + AlgoritmoFloyd.obtenerRuta(distancias, indiceOrigen, indiceDestino));
+
+                    if (indiceOrigen >= 0 && indiceOrigen < grafo.getNumVertices() && indiceDestino >= 0 && indiceDestino < grafo.getNumVertices()) {
+                        String ruta = AlgoritmoFloyd.obtenerRuta(distancias, next, indiceOrigen, indiceDestino, grafo);
+                        System.out.println("Ruta más corta: " + ruta);
+                    } else {
+                        System.out.println("Índices fuera de los límites del grafo.");
+                    }
                     break;
 
                 case 2:
@@ -64,6 +69,7 @@ public class App
                         grafo.agregarArco(ciudad1, ciudad2, distancia);
                     }
                     distancias = AlgoritmoFloyd.floydWarshall(grafo.getMatrizAdyacencia());
+                    next = AlgoritmoFloyd.floydWarshall(grafo.getMatrizAdyacencia());
                     break;
 
                 case 4:
